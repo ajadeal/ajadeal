@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Ajadeal</title>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <p>For inquiries, please reach us at:</p>
+    <ul>
+        <li>Email: support@ajadeal.com</li>
+        <li>Phone: +1 (555) 123-4567</li>
+    </ul>
+    <a href="index.html">Back to Homepage</a>
+</body>
+</html>

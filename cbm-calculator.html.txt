@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBM Calculator - Ajadeal</title>
+    <style>
+        .calculator { max-width: 300px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 5px; }
+        .result { font-weight: bold; color: green; }
+    </style>
+</head>
+<body>
+    <h1>CBM Calculator</h1>
+    <div class="calculator">
+        <label>Length (m): <input type="number" id="length" step="0.01"></label><br>
+        <label>Width (m): <input type="number" id="width" step="0.01"></label><br>
+        <label>Height (m): <input type="number" id="height" step="0.01"></label><br><br>
+        <button onclick="calculateCBM()">Calculate CBM</button>
+        <p class="result" id="result"></p>
+    </div>
+
+    <script>
+        function calculateCBM() {
+            let length = parseFloat(document.getElementById("length").value);
+            let width = parseFloat(document.getElementById("width").value);
+            let height = parseFloat(document.getElementById("height").value);
+            if (isNaN(length) || isNaN(width) || isNaN(height)) {
+                document.getElementById("result").textContent = "Please enter valid dimensions.";
+                return;
+            }
+            let cbm = length * width * height;
+            let price;
+            if (cbm > 0.5) price = "$299 (Full CBM)";
+            else if (cbm > 0.25) price = "$199 (Half CBM)";
+            else price = "$119 (Quarter CBM)";
+            document.getElementById("result").textContent = `CBM: ${cbm.toFixed(2)} - Recommended Price: ${price}`;
+        }
+    </script>
+    <a href="index.html">Back to Homepage</a>
+</body>
+</html>
